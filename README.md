@@ -3,7 +3,7 @@
 /*   Project content and tools used are as follows :
          
           * Entity Framework Linq Queries
-          * Class Object and OOP Concepts                            -The backup file version I uploaded it "MSSQLSERVER2019"-
+          * Class Object and OOP Concepts          -The backup file version I uploaded it "MSSQLSERVER2019"-
           * Database Management with SQL
           * Procedure and Trigger Controls
           * Structure of Dahsboard
