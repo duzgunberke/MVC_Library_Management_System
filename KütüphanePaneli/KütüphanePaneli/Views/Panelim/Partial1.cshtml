@@ -1,0 +1,36 @@
+﻿@using KütüphanePaneli.Models.Entity
+@model List<TBL_DUYURU>
+@foreach (var x in Model)
+{
+    <div class="post">
+
+        <div class="user-block">
+
+            <img class="img-circle img-bordered-sm" src="~/AdminLTE-3.0.4/dist/img/4.png" alt="user image">
+
+            <span class="username">
+
+                <a href="#">@x.KATEGORI</a>
+
+                <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
+
+            </span>
+
+            <span class="description">@x.TARIH.ToString()</span>
+
+        </div>
+
+        <!-- /.user-block -->
+
+        <p>
+           
+            @x.ICERIK
+
+        </p>
+
+
+
+      
+
+    </div>
+}

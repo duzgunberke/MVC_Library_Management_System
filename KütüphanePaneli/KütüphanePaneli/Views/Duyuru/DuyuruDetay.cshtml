@@ -1,0 +1,32 @@
+﻿@model KütüphanePaneli.Models.Entity.TBL_DUYURU
+@{
+    ViewBag.Title = "DuyuruDetay";
+    Layout = "~/Views/Shared/SidebarLayout.cshtml";
+}
+
+@using (Html.BeginForm("DuyuruGuncelle", "Duyuru", FormMethod.Post))
+{
+    <div style="margin-bottom:15px"></div>
+    <div class="form-group">
+        @Html.LabelFor(k => k.ID)
+        @Html.TextBoxFor(k => k.ID, new { @class = "form-control" })
+        <br />
+
+        <label>DUYURU KATEGORİ</label>
+        @Html.TextBoxFor(k => k.KATEGORI, new { @class = "form-control" })
+        <br />
+        <label>DUYURU İÇERİK</label>
+        @Html.TextAreaFor(k => k.ICERIK, new { @class = "form-control" })
+        <br />
+        <label>DUYURU TARİH</label>
+        @Html.TextBoxFor(k => k.TARIH, new { @class = "form-control" })
+        <br />
+
+
+    </div>
+    <div>
+        <button class="btn btn-warning">Güncelle</button>
+    </div>
+}
+
+

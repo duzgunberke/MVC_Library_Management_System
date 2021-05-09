@@ -1,0 +1,138 @@
+﻿@using KütüphanePaneli.Models.Entity
+
+@model List<TBL_HAREKET>
+
+@{
+
+    ViewBag.Title = "Kitaplarim";
+
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+
+}
+<h4>Geçmiş Kitaplarım</h4>
+
+<!DOCTYPE html>
+
+<html>
+
+<body class="hold-transition sidebar-mini">
+
+    <section class="content">
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+
+
+                <!-- /.col -->
+
+                <div class="col-md-12">
+
+                    <div class="card">
+
+                        <div class="card-header p-2">
+
+
+
+                        </div><!-- /.card-header -->
+
+                        <div class="card-body">
+
+
+
+                            <div class="tab-pane" id="timeline">
+
+                                <!-- The timeline -->
+
+                                <div class="timeline timeline-inverse">
+
+                                    <!-- timeline time label -->
+
+                                    @foreach (var x in Model)
+
+                                    {
+
+                                        <div class="time-label">
+
+                                            <a class="btn btn-success">
+
+                                                <span class="bg-success">
+
+                                                    @Convert.ToDateTime(x.ALISTARIH).ToString("dd/MMM/yyyy")
+
+                                                </span>
+
+                                            </a>
+
+                                            -----
+
+                                            <a class="btn btn-warning">
+
+                                                <span class="bg-warning">
+                                                    @if (x.UYEGETIRMETARIH == null)
+                                                    {
+                                                        <b style="color:crimson">Devam Etmekte</b>
+                                                    }
+                                                    @if (x.UYEGETIRMETARIH != null)
+                                                    {@Convert.ToDateTime(x.UYEGETIRMETARIH).ToString("dd/MMM/yyyy")}
+
+
+                                                </span>
+
+                                            </a>
+
+                                        </div>
+
+                                        <!-- /.timeline-label -->
+
+                                        <!-- timeline item -->
+
+                                        <div>
+                                            <div class="timeline-item">
+
+                                                <div class="timeline-body">
+
+                                                    Kitap Adı : <b>@x.TBL_KITAP.AD</b>   Yazarı : <b>@x.TBL_KITAP.TBL_YAZAR.AD   @x.TBL_KITAP.TBL_YAZAR.SOYAD</b>
+
+                                                </div>
+
+
+
+                                            </div>
+
+                                        </div>
+
+                                    }
+
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
+                    </div><!-- /.card-body -->
+
+                </div>
+
+                <!-- /.nav-tabs-custom -->
+
+            </div>
+
+            <!-- /.col -->
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
+
+
+
+
+
+

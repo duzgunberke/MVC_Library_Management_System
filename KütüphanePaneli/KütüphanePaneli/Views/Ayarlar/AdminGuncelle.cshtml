@@ -1,0 +1,32 @@
+﻿@model KütüphanePaneli.Models.Entity.TBL_ADMIN
+@{
+    ViewBag.Title = "AdminGuncelle";
+    Layout = "~/Views/Shared/SidebarLayout.cshtml";
+}
+<title>Admin Güncelle</title>
+
+@using (Html.BeginForm("AdminGuncelle", "Ayarlar", FormMethod.Post))
+{
+    <div style="margin-bottom:15px"></div>
+    <div class="form-group">
+        @Html.LabelFor(k => k.ID)
+        @Html.TextBoxFor(k => k.ID, new { @class = "form-control" })
+        <br />
+
+        <label>KULLANICI ADI</label>
+        @Html.TextBoxFor(k => k.KULLANICI, new { @class = "form-control" })
+
+        <br />
+        <label>SIFRE</label>
+        @Html.TextBoxFor(k => k.SIFRE, new { @class = "form-control" })
+        <br />
+        <label>YETKI</label>
+        @Html.TextBoxFor(k => k.YETKI, new { @class = "form-control" })
+
+
+    </div>
+    <div>
+        <button class="btn btn-warning">Güncelle</button>
+    </div>
+}
+

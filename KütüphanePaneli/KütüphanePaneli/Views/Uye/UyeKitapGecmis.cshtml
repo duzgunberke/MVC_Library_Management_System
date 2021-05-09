@@ -1,0 +1,35 @@
+﻿@using KütüphanePaneli.Models.Entity
+@model List<TBL_HAREKET>
+@{
+    ViewBag.Title = "UyeKitapGecmis";
+    Layout = "~/Views/Shared/SidebarLayout.cshtml";
+}
+
+<h2>Üye : @ViewBag.u1</h2>
+<br />
+<table class="table table-danger">
+    <tr>
+        <th>
+            Kitap Adı
+        </th>
+        <th>
+            Personel
+        </th>
+        <th>
+            Alış Tarihi
+        </th>
+        <th>
+            Üye Getirme Tarihi
+        </th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.TBL_KITAP.AD</td>
+            <td>@x.TBL_PERSONEL.PERSONEL</td>
+            <td>@Convert.ToDateTime(x.ALISTARIH).ToString("dd/MM/yyyy")</td>
+            <td>@Convert.ToDateTime(x.UYEGETIRMETARIH).ToString("dd/MM/yyyy")</td>
+        </tr>
+    }
+</table>
+

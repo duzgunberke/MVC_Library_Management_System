@@ -1,0 +1,47 @@
+﻿@using KütüphanePaneli.Models.Entity;
+@model List<TBL_DUYURU>
+@{
+    ViewBag.Title = "Duyurular";
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+}
+
+<h2>Duyurular</h2>
+<style>
+    th {
+        font-size: 16px;
+        text-align: center
+    }
+
+    td {
+        text-align: center
+    }
+</style>
+
+<table class="table table-bordered">
+    <tr style="background-color:#b5f59f">
+
+        <th>KATEGORİ</th>
+        <th>TARİH</th>
+
+
+        <th>İÇERİK</th>
+    </tr>
+    @foreach (var d in Model)
+    {
+
+
+        <tr>
+            <td>
+                <b> @d.KATEGORI</b>
+            </td>
+            <td>
+                <b>@Convert.ToDateTime(@d.TARIH).ToString("dd/MM/yyyy")</b>
+            </td>
+            <td>
+                @d.ICERIK
+            </td>
+        </tr>
+    }
+</table>
+
+

@@ -1,0 +1,69 @@
+﻿@using KütüphanePaneli.Models.Entity
+@model List<TBL_KITAP>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/SidebarLayout.cshtml";
+}
+<title>Kitaplar</title>
+<h2>Kitap Sayfası</h2>
+
+@using (Html.BeginForm("Index", "Kitap", FormMethod.Get))
+{
+    <div style="margin-bottom:15px;margin-top:15px;text-align:right">
+
+        <input type="text" class="form-control" placeholder="Aranacak Kitabı Girin..." @Html.TextBox("p")
+    </div>
+}
+
+
+<style>
+    #aak:hover{
+        background-color:lightblue
+    }
+</style>
+<table class="table table-striped">
+    <tr style="background-color:#c5d670">
+        <th>ID</th>
+        <th>Kitap Adı</th>
+        <th>Kitap Yazarı</th>
+        <th>Kategori</th>
+        <th>Basım Yılı</th>
+        <th>Yayınevi</th>
+        <th>Sayfa</th>
+        <th>Durum</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var k in Model)
+    {
+        <tr id="aak">
+            <td>@k.ID</td>
+            <td>@k.AD</td>
+            <td>@k.TBL_YAZAR.AD @k.TBL_YAZAR.SOYAD</td>
+            <td>@k.TBL_KATEGORI.AD</td>
+            <td>@k.BASIMYIL</td>
+            <td>@k.YAYINEVI</td>
+            <td>@k.SAYFASAYISI</td>
+            <td>@k.DURUM</td>
+            <td>
+                @Html.ActionLink("Sil", "KitapSil", new { id = k.ID }, new
+       { @class = "btn btn-danger", onclick = "return confirm('Kitabı Silmek İstiyor Musunuz ?')" })
+            </td>
+            <td><a href="/Kitap/KitapGetir/@k.ID" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+
+    @using (Html.BeginForm("Index", "Kitap", FormMethod.Get))
+    {
+        <div style="margin-bottom:15px;margin-top:15px">
+            <a href="/Kitap/KitapEkle" class="btn btn-primary" >Yeni Kitap Ekle</a>
+            <b style="margin-left:750px">Aranacak Kitabı Giriniz &nbsp</b>@Html.TextBox("p")
+            <input type="submit" value="Ara" />
+            
+        </div>
+    }
+
+
+
+

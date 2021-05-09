@@ -1,0 +1,39 @@
+﻿@using KütüphanePaneli.Models.Entity
+@model List<TBL_HAREKET>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/SidebarLayout.cshtml";
+}
+<title>Ödünç Kitabı İade</title>
+<h2>Ödünç Kitap Listesi</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>İşlem ID</th>
+        <th>Kitap Adı</th>
+        <th>Üye</th>
+        <th>Personel</th>
+        <th>Alış Tarihi</th>
+        <th>İade Tarihi</th>
+        
+        <th>İade Al</th>
+       
+    </tr>
+    @foreach (var k in Model)
+    {
+        <tr>
+            <td>@k.ID</td>
+            <td>@k.TBL_KITAP.AD </td>
+            <td>@k.TBL_UYELER.AD @k.TBL_UYELER.SOYAD</td>
+            <td>@k.TBL_PERSONEL.PERSONEL</td>
+            <td>@Convert.ToDateTime(k.ALISTARIH).ToString("dd/MM/yyyy")</td>
+            <td>@Convert.ToDateTime(k.IADETARIH).ToString("dd/MM/yyyy")</td>
+            
+            
+            <td><a href="/Odunc/OduncIade/@k.ID" class="btn btn-default" style="background-color:#ff0090;color:#ffd800">Kitabı İade Et</a></td>
+            
+        </tr>
+    }
+</table>
+
+
+

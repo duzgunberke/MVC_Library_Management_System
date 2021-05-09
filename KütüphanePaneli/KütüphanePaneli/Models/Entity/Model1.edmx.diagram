@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4820ef647b4748ec93ac64b86a088eed" Name="Diagram1" ZoomLevel="71">
+        <EntityTypeShape EntityType="DboKütüphaneYönetimModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboKütüphaneYönetimModel.TBL_CEZALAR" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboKütüphaneYönetimModel.TBL_HAREKET" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboKütüphaneYönetimModel.TBL_KASA" Width="1.5" PointX="9.625" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboKütüphaneYönetimModel.TBL_KATEGORI" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboKütüphaneYönetimModel.TBL_KITAP" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboKütüphaneYönetimModel.TBL_PERSONEL" Width="1.5" PointX="8.375" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboKütüphaneYönetimModel.TBL_UYELER" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboKütüphaneYönetimModel.TBL_YAZAR" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <AssociationConnector Association="DboKütüphaneYönetimModel.FK_TBL_CEZALAR_TBL_HAREKET" ManuallyRouted="false" />
+        <AssociationConnector Association="DboKütüphaneYönetimModel.FK_TBL_CEZALAR_TBL_UYELER" ManuallyRouted="false" />
+        <AssociationConnector Association="DboKütüphaneYönetimModel.FK_TBL_HAREKET_TBL_KITAP" ManuallyRouted="false" />
+        <AssociationConnector Association="DboKütüphaneYönetimModel.FK_TBL_HAREKET_TBL_UYELER" ManuallyRouted="false" />
+        <AssociationConnector Association="DboKütüphaneYönetimModel.FK_TBL_KITAP_TBL_KATEGORI" ManuallyRouted="false" />
+        <AssociationConnector Association="DboKütüphaneYönetimModel.FK_TBL_KITAP_TBL_YAZAR" ManuallyRouted="false" />
+        <AssociationConnector Association="DboKütüphaneYönetimModel.FK_TBL_HAREKET_TBL_PERSONEL" />
+        <EntityTypeShape EntityType="DboKütüphaneYönetimModel.TBL_HAKKIMIZDA" Width="1.875" PointX="5.375" PointY="7.75" />
+        <EntityTypeShape EntityType="DboKütüphaneYönetimModel.TBL_ILETISIM" Width="1.5" PointX="8" PointY="7.75" />
+        <EntityTypeShape EntityType="DboKütüphaneYönetimModel.TBL_MESAJLAR" Width="1.5" PointX="1.25" PointY="7.875" />
+        <EntityTypeShape EntityType="DboKütüphaneYönetimModel.TBL_DUYURU" Width="1.5" PointX="9.625" PointY="1.875" />
+        <EntityTypeShape EntityType="DboKütüphaneYönetimModel.TBL_ADMIN" Width="1.5" PointX="3.375" PointY="8.5" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

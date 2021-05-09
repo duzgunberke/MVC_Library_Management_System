@@ -1,0 +1,20 @@
+﻿@model KütüphanePaneli.Models.Entity.TBL_PERSONEL
+@{
+    ViewBag.Title = "PersonelEkle";
+    Layout = "~/Views/Shared/SidebarLayout.cshtml";
+}
+
+<h2>PersonelEkle</h2>
+
+<form class="form-group" method="post">
+    <div></div>
+    <div style="margin-top:15px">
+        <label>Personelin Adı</label>
+        @*<input type="text" class="form-control" name="PERSONEL" />*@
+        @Html.TextBoxFor(x => x.PERSONEL, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.PERSONEL, "", new { @style = "color:red" })
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-info" id="Btn1">Personel Ekle</button>
+    </div>
+</form>

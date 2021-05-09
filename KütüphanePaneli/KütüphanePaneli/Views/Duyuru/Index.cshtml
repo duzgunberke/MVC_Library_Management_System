@@ -1,0 +1,67 @@
+﻿@using KütüphanePaneli.Models.Entity
+@model List<TBL_DUYURU>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/SidebarLayout.cshtml";
+    string renk = "";
+}
+<style>
+    th {
+        font-size: 16px;
+        text-align: center
+    }
+
+    td {
+        text-align: center
+    }
+</style>
+<title>Duyurular</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<h2>Duyurular</h2>
+<table class="table table-bordered">
+    <tr style="background-color:#f6a77a">
+        <th>DUYURU NO</th>
+        <th>KATEGORİ</th>
+        <th>TARİH</th>
+        <th>SİL</th>
+
+        <th>İÇERİK</th>
+    </tr>
+    @foreach (var d in Model)
+    {
+
+        if (d.KATEGORI == "Diğer")
+        {
+            renk = "bg-info text-white";
+        }
+        if(d.KATEGORI=="Yeni Kitap")
+        {
+            renk = "bg-warning text-white";
+        }
+        if (d.KATEGORI == "Kitapları Geciktirmeyin")
+        {
+            renk = "bg-danger text-white";
+        }
+        if (d.KATEGORI == "İletişim")
+        {
+            renk = "bg-success text-white";
+        }
+      
+        <tr>
+            <td>
+                <b> @d.ID</b>
+            </td>
+            <td class="@renk">
+                <b> @d.KATEGORI</b>
+            </td>
+            <td>@Convert.ToDateTime(d.TARIH).ToString("dd/MM/yyyy")</td>
+            <td><a href="/Duyuru/DuyuruSil/@d.ID" class="btn btn-danger">SİL</a></td>
+
+            <td><a href="/Duyuru/DuyuruDetay/@d.ID" class="btn btn-default" style="background-color:chartreuse">DETAYLAR</a></td>
+        </tr>
+    }
+</table>
+<a href="/Duyuru/YeniDuyuru/" class="btn btn-primary">Yeni Duyuru Ekle</a>
+

@@ -1,0 +1,41 @@
+﻿@using KütüphanePaneli.Models.Entity
+@model List<TBL_KATEGORI>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/SidebarLayout.cshtml";
+}
+<style>
+    tr:hover{
+        background-color:antiquewhite
+    }
+</style>
+<h2>Kategoriler</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            KATEGORİ ID
+        </th>
+        <th>
+            KATEGORİ ADI
+        </th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    @foreach(var ktg in Model)
+    {
+
+    
+    <tr>
+        <td>
+            @ktg.ID
+        </td>
+        <td>
+            @ktg.AD
+        </td>
+        <td ><a href="/Kategori/KategoriSil/@ktg.ID" class="btn btn-danger">SİL</a></td>
+        <td ><a href="/Kategori/KategoriGetir/@ktg.ID" class="btn btn-success">GÜNCELLE</a></td>
+    </tr>
+    }
+</table>
+<a href="/Kategori/KategoriEkle/" class="btn btn-primary">Yeni Katerori Ekle</a>
+
