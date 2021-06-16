@@ -1,5 +1,22 @@
 # Mvc_Library_Management_System
+<b>The first panel, the showcase panel :</b></br></br>
+ <img src="https://i.hizliresim.com/3iy2k6f.gif" align="center" style="width: 60%" /></br></br>
 
+<b>The second panel, member panel :</b></br></br>
+ <img src="https://i.hizliresim.com/hjp4vh3.gif" align="center" style="width: 60%" /></br></br>
+ 
+ <b>If you're not yet a member of our site, sign up :</b></br></br>
+ <img src="https://i.hizliresim.com/nidztki.gif" align="center" style="width: 60%" /></br></br>
+ 
+  <b>Admin panel with A authority where we can control the background of our site :</b></br></br>
+ <img src="https://i.hizliresim.com/cjz19i2.gif" align="center" style="width: 60%" /></br></br>
+ 
+  <b>Employee panel with B authorization. Can't access some sections on left panel :</b></br></br>
+ <img src="https://i.hizliresim.com/mgtcz0z.gif" align="center" style="width: 60%" /></br></br>
+ 
+ <b>If you type a wrong URL, you will be directed to this page :</b></br></br>
+ <img src="https://i.hizliresim.com/jf5f6y3.gif" align="center" style="width: 60%" /></br>
+ <b>And more...</b></br>
 /*   Project content and tools used are as follows :
          
          This project consists of 3 basic panels of a library: showcase, admin and user.
